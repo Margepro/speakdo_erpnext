@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "creation": "2026-09-29 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "erp_user",
+  "channel",
+  "status",
+  "expires_at",
+  "consumed_at",
+  "terminal_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "erp_user",
+   "fieldtype": "Link",
+   "label": "Utilisateur ERPNext",
+   "options": "User",
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Data",
+   "label": "Canal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Statut",
+   "options": "issued\nconsumed\nrevoked",
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "expires_at",
+   "fieldtype": "Datetime",
+   "label": "Expire le",
+   "in_list_view": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "consumed_at",
+   "fieldtype": "Datetime",
+   "label": "Consommé le",
+   "read_only": 1
+  },
+  {
+   "fieldname": "terminal_id",
+   "fieldtype": "Data",
+   "label": "Terminal",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-29 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SpeakDo",
+ "name": "SpeakDo Enrollment Token",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "in_create": 1,
+ "read_only": 1,
+ "track_changes": 0,
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "create": 0,
+   "write": 0,
+   "delete": 0,
+   "email": 0,
+   "print": 0,
+   "share": 0,
+   "report": 1,
+   "export": 0
+  }
+ ],
+ "autoname": "prompt",
+ "naming_rule": "Set by user",
+ "description": "Jetons d'enrôlement à usage unique (nom = SHA-256 du jeton ; le jeton n'est jamais stocké). Usage interne."
+}

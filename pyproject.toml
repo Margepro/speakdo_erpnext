@@ -1,0 +1,39 @@
+[project]
+name = "speakdo_erpnext"
+authors = [
+  { name = "SpeakDo", email = "contact@speakdo.fr" },
+]
+description = "SpeakDo companion for ERPNext: instance attachment, user enrolment, capabilities, allowed profiles, per-user credentials and terminals"
+requires-python = ">=3.10"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+# Single source of version: speakdo_erpnext/__init__.py (__version__), read by flit.
+dynamic = ["version"]
+dependencies = [
+    # requests and pyqrcode/pypng are already provided by Frappe v15.
+]
+
+[project.urls]
+Homepage = "https://speakdo.fr"
+Documentation = "https://docs.speakdo.fr"
+"Dolibarr module" = "https://github.com/Margepro/speakdo"
+
+[build-system]
+requires = ["flit_core >=3.12,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<16.0.0"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I", "UP", "B", "RUF"]
+ignore = ["B904", "E501", "W191", "E101", "RUF001", "RUF012"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"

@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "creation": "2026-09-29 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "flow_type",
+  "installation_id",
+  "erp_base_url",
+  "expires_at",
+  "challenge"
+ ],
+ "fields": [
+  {
+   "fieldname": "flow_type",
+   "fieldtype": "Select",
+   "label": "Flux",
+   "options": "bootstrap\nrepair\nrelocation",
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "installation_id",
+   "fieldtype": "Data",
+   "label": "Installation ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "erp_base_url",
+   "fieldtype": "Data",
+   "label": "URL ERPNext",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expires_at",
+   "fieldtype": "Datetime",
+   "label": "Expire le",
+   "in_list_view": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "challenge",
+   "fieldtype": "Password",
+   "label": "Challenge",
+   "hidden": 1,
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-29 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SpeakDo",
+ "name": "SpeakDo Flow Challenge",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "in_create": 1,
+ "read_only": 1,
+ "track_changes": 0,
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "create": 0,
+   "write": 0,
+   "delete": 0,
+   "email": 0,
+   "print": 0,
+   "share": 0,
+   "report": 1,
+   "export": 0
+  }
+ ],
+ "autoname": "prompt",
+ "naming_rule": "Set by user",
+ "description": "Challenges temporaires des flux à preuve (nom = identifiant de flux émis par le middleware). Usage interne."
+}

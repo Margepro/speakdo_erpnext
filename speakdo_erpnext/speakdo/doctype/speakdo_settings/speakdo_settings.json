@@ -1,0 +1,250 @@
+{
+ "actions": [],
+ "creation": "2026-09-29 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_urls",
+  "middleware_url",
+  "app_url",
+  "column_break_urls",
+  "instance_url",
+  "declared_instance_url",
+  "section_identity",
+  "enrollment_status",
+  "tenant_uuid",
+  "bootstrap_mode",
+  "column_break_identity",
+  "installation_id",
+  "erp_type",
+  "section_versions",
+  "protocol_version",
+  "companion_version",
+  "billing_status",
+  "eligible_until",
+  "column_break_versions",
+  "relocation_availability",
+  "reset_availability",
+  "features_checked_at",
+  "section_tracking",
+  "last_successful_contact",
+  "last_error_at",
+  "column_break_tracking",
+  "last_error_code",
+  "last_error_message",
+  "section_secrets",
+  "hmac_secret"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_urls",
+   "fieldtype": "Section Break",
+   "label": "Configuration"
+  },
+  {
+   "default": "https://api.speakdo.fr",
+   "description": "URL du middleware SpeakDo (bootstrap, repair, relocation, reset).",
+   "fieldname": "middleware_url",
+   "fieldtype": "Data",
+   "label": "Middleware SpeakDo",
+   "options": "URL"
+  },
+  {
+   "default": "https://app.speakdo.fr",
+   "description": "URL de l'application SpeakDo (base du QR d'enrôlement PWA).",
+   "fieldname": "app_url",
+   "fieldtype": "Data",
+   "label": "Application SpeakDo",
+   "options": "URL"
+  },
+  {
+   "fieldname": "column_break_urls",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Racine réelle de cet ERPNext (scheme://hôte[:port], sans chemin), joignable depuis le middleware. La surface compagnon en est dérivée : {URL}/api/method/speakdo_erpnext.api.companion. Ce n'est ni une URL SpeakDo ni une identité.",
+   "fieldname": "instance_url",
+   "fieldtype": "Data",
+   "label": "URL de cette instance ERPNext",
+   "options": "URL"
+  },
+  {
+   "description": "Dernière URL ERPNext déclarée au middleware (bootstrap / relocation).",
+   "fieldname": "declared_instance_url",
+   "fieldtype": "Data",
+   "label": "URL d'instance déclarée",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Identité"
+  },
+  {
+   "default": "not_enrolled",
+   "fieldname": "enrollment_status",
+   "fieldtype": "Select",
+   "label": "État d'enrôlement",
+   "options": "not_enrolled\nenrolled\nrepair_required\nerror",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tenant_uuid",
+   "fieldtype": "Data",
+   "label": "Tenant UUID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bootstrap_mode",
+   "fieldtype": "Data",
+   "label": "Mode du dernier bootstrap",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_identity",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "UUID v4 stable de l'installation (nom réseau : installation_id). Généré une seule fois.",
+   "fieldname": "installation_id",
+   "fieldtype": "Data",
+   "label": "Installation ID",
+   "read_only": 1
+  },
+  {
+   "default": "erpnext",
+   "fieldname": "erp_type",
+   "fieldtype": "Data",
+   "label": "Type d'ERP",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_versions",
+   "fieldtype": "Section Break",
+   "label": "Versions et fonctions du middleware",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "protocol_version",
+   "fieldtype": "Data",
+   "label": "Version de protocole",
+   "read_only": 1
+  },
+  {
+   "fieldname": "companion_version",
+   "fieldtype": "Data",
+   "label": "Version du compagnon",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_status",
+   "fieldtype": "Data",
+   "label": "Statut de facturation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "eligible_until",
+   "fieldtype": "Data",
+   "label": "Éligible jusqu'au (UTC)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_versions",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "unknown",
+   "fieldname": "relocation_availability",
+   "fieldtype": "Select",
+   "label": "Relocation (middleware)",
+   "options": "unknown\navailable\nunavailable",
+   "read_only": 1
+  },
+  {
+   "default": "unknown",
+   "fieldname": "reset_availability",
+   "fieldtype": "Select",
+   "label": "Reset (middleware)",
+   "options": "unknown\navailable\nunavailable",
+   "read_only": 1
+  },
+  {
+   "fieldname": "features_checked_at",
+   "fieldtype": "Datetime",
+   "label": "Fonctions vérifiées le",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_tracking",
+   "fieldtype": "Section Break",
+   "label": "Suivi",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "last_successful_contact",
+   "fieldtype": "Datetime",
+   "label": "Dernier contact réussi",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_error_at",
+   "fieldtype": "Datetime",
+   "label": "Dernière erreur le",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_tracking",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_error_code",
+   "fieldtype": "Data",
+   "label": "Dernier code erreur",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_error_message",
+   "fieldtype": "Small Text",
+   "label": "Dernier message d'erreur",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_secrets",
+   "fieldtype": "Section Break",
+   "label": "Secret",
+   "hidden": 1
+  },
+  {
+   "description": "Secret HMAC du tenant, chiffré (jamais affiché ni renvoyé au navigateur).",
+   "fieldname": "hmac_secret",
+   "fieldtype": "Password",
+   "label": "Secret HMAC",
+   "hidden": 1,
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-30 09:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SpeakDo",
+ "name": "SpeakDo Settings",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "description": "Configuration technique du compagnon SpeakDo (identité, enrôlement, URLs). Aucune logique métier.",
+ "issingle": 1,
+ "track_changes": 1,
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "print": 0,
+   "share": 0
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+.speakdo-admin { padding: var(--padding-md) 0; }
+.speakdo-admin .sd-card {
+	background: var(--card-bg);
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius-md);
+	padding: var(--padding-md) var(--padding-lg);
+	margin-bottom: var(--margin-md);
+}
+.speakdo-admin .sd-card h4 { margin: 0 0 var(--margin-sm); font-weight: 600; }
+.speakdo-admin .sd-grid { display: grid; grid-template-columns: minmax(180px, 30%) 1fr; gap: 6px 16px; }
+.speakdo-admin .sd-grid .sd-label { color: var(--text-muted); }
+.speakdo-admin .sd-grid .sd-value { font-family: var(--font-stack-monospace, monospace); word-break: break-all; }
+.speakdo-admin .sd-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.speakdo-admin .sd-qr { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.speakdo-admin .sd-qr img { width: 240px; height: 240px; image-rendering: pixelated; border: 1px solid var(--border-color); }
+.speakdo-admin .sd-form .form-group { margin-bottom: 8px; }
+.speakdo-admin .sd-muted { color: var(--text-muted); }
+@media (max-width: 600px) {
+	.speakdo-admin .sd-grid { grid-template-columns: 1fr; }
+}

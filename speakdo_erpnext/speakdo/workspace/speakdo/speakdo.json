@@ -1,0 +1,33 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"sdhead01\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>SpeakDo</b></span>\",\"col\":12}},{\"id\":\"sdshort1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Administration SpeakDo\",\"col\":4}},{\"id\":\"sdshort2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Paramètres SpeakDo\",\"col\":4}}]",
+ "creation": "2026-09-29 00:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "chat",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "SpeakDo",
+ "links": [],
+ "modified": "2026-09-29 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SpeakDo",
+ "name": "SpeakDo",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {"role": "System Manager"}
+ ],
+ "sequence_id": 90.0,
+ "shortcuts": [
+  {"color": "Blue", "doc_view": "", "label": "Administration SpeakDo", "link_to": "speakdo-admin", "type": "Page"},
+  {"color": "Grey", "doc_view": "", "label": "Paramètres SpeakDo", "link_to": "SpeakDo Settings", "type": "DocType"}
+ ],
+ "title": "SpeakDo"
+}
